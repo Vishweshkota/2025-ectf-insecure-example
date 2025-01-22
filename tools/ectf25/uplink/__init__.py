@@ -19,7 +19,7 @@ import time
 
 from loguru import logger
 
-from ectf25.utils import Encoder
+from tools.ectf25.utils import Encoder
 
 
 Frame = namedtuple("Frame", ["channel", "data", "timestamp"])
