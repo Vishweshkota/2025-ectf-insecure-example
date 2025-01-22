@@ -13,7 +13,7 @@ Copyright: Copyright (c) 2025 The MITRE Corporation
 
 import argparse
 
-from ectf25.tv import TV
+from tools.ectf25.tv import TV
 
 
 def main():

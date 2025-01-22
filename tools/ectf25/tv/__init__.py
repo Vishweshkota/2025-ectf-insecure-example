@@ -19,7 +19,7 @@ import time
 
 from loguru import logger
 
-from ectf25.utils.decoder import DecoderIntf
+from tools.ectf25.utils.decoder import DecoderIntf
 
 
 class DecoderError(Exception):
