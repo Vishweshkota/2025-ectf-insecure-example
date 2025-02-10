@@ -11,6 +11,7 @@
  * @copyright Copyright (c) 2025 The MITRE Corporation
  */
 
+
 #if CRYPTO_EXAMPLE
 #ifndef ECTF_CRYPTO_H
 #define ECTF_CRYPTO_H

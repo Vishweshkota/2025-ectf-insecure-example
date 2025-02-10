@@ -23,13 +23,20 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     wget \
     libtool \
     texinfo \
-    unzip    
+    unzip
 
 # Install MSDK
 RUN apt-get install -y unzip && \
     wget https://github.com/analogdevicesinc/msdk/archive/refs/tags/v2024_02.zip && \
     unzip v2024_02.zip && \
     rm -f v2024_02.zip
+
+# Install wolfssl
+# RUN git clone https://github.com/wolfSSL/wolfssl.git && \
+#     cd wolfssl && \
+#     ./autogen.sh && \
+#     ./configure --enable-aes --enable-sha --enable-rsa --enable-hash
+
 
 ENV MAXIM_PATH=/root/msdk-2024_02
 

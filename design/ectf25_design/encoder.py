@@ -14,6 +14,10 @@ import argparse
 import struct
 import json
 
+from Crypto.Random import get_random_bytes
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Hash import HMAC
 
 class Encoder:
     def __init__(self, secrets: bytes):
@@ -32,6 +36,7 @@ class Encoder:
         # Load the example secrets for use in Encoder.encode
         # This will be "EXAMPLE" in the reference design"
         self.some_secrets = secrets["some_secrets"]
+       
 
     def encode(self, channel: int, frame: bytes, timestamp: int) -> bytes:
         """The frame encoder function
@@ -53,8 +58,14 @@ class Encoder:
         """
         # TODO: encode the satellite frames so that they meet functional and
         #  security requirements
+        print(frame)
+        # print(self.some_secrets)
+        # key = get_random_bytes(16)
+        # cipher = AES.new(self.some_secrets, AES.MODE_CBC)
+        # encryptedFrame = cipher.encrypt(pad(frame, AES.block_size))
 
         return struct.pack("<IQ", channel, timestamp) + frame
+    
 
 
 def main():
