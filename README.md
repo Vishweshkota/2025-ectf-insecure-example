@@ -279,7 +279,7 @@ python -m ectf25.tv.subscribe subscription.bin /dev/tty.usbmodem11302
 #### PowerShell
 
 ```
-python -m ectf25.tv.subscribe subscription.bin COM12
+python -m tools.ectf25.tv.subscribe subscription.bin COM12
 ```
 
 ### Tester Tool
@@ -427,5 +427,5 @@ python -m ectf25.tv.run localhost 2001 /dev/tty.usbmodem11302
 #### PowerShell
 
 ```
-python -m ectf25.tv.run localhost 2001 COM12
+python -m tools.ectf25.tv.run localhost 2001 COM12
 ```
